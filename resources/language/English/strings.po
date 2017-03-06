@@ -440,7 +440,7 @@ msgid "Are you ready to exit Plex?"
 msgstr ""
 
 msgctxt "#32336"
-msgid "Exit"
+msgid "Back to Kodi"
 msgstr ""
 
 msgctxt "#32337"
@@ -925,4 +925,8 @@ msgstr ""
 
 msgctxt "#32457"
 msgid "Sign In"
+msgstr ""
+
+msgctxt "#32458"
+msgid "Exit Kodi"
 msgstr ""

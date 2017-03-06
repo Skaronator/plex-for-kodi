@@ -447,7 +447,8 @@ class HomeWindow(kodigui.BaseWindow, util.CronReceiver):
         button = optionsdialog.show(
             T(32334, 'Confirm Exit'),
             T(32335, 'Are you ready to exit Plex?'),
-            T(32336, 'Exit'),
+            T(32336, 'Back to Kodi'),
+            T(32458, 'Exit Kodi'),
             T(32337, 'Cancel')
         )
 

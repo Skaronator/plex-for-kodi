@@ -87,8 +87,15 @@ def _main():
 
                         util.DEBUG_LOG('STARTING WITH SERVER: {0}'.format(plexapp.SERVERMANAGER.selectedServer))
 
+                        util.DEBUG_LOG('SKN-DEBUG: 1')
+
                         windowutils.HOME = home.HomeWindow.open()
+
+                        util.DEBUG_LOG('SKN-DEBUG: 2')
+
                         util.CRON.cancelReceiver(windowutils.HOME)
+
+                        util.DEBUG_LOG('SKN-DEBUG: 3')
 
                         if not windowutils.HOME.closeOption:
                             return

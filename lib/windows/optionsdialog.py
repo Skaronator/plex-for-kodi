@@ -12,7 +12,7 @@ class OptionsDialog(kodigui.BaseDialog):
     height = 1080
 
     GROUP_ID = 100
-    BUTTON_IDS = (1001, 1002, 1003)
+    BUTTON_IDS = (1001, 1002, 1003, 1004)
 
     def __init__(self, *args, **kwargs):
         kodigui.BaseDialog.__init__(self, *args, **kwargs)
@@ -21,11 +21,15 @@ class OptionsDialog(kodigui.BaseDialog):
         self.button0 = kwargs.get('button0')
         self.button1 = kwargs.get('button1')
         self.button2 = kwargs.get('button2')
+        self.button3 = kwargs.get('button3')
         self.buttonChoice = None
 
     def onFirstInit(self):
         self.setProperty('header', self.header)
         self.setProperty('info', self.info)
+
+        if self.button3:
+            self.setProperty('button.3', self.button3)
 
         if self.button2:
             self.setProperty('button.2', self.button2)
@@ -46,8 +50,8 @@ class OptionsDialog(kodigui.BaseDialog):
             self.doClose()
 
 
-def show(header, info, button0=None, button1=None, button2=None):
-    w = OptionsDialog.open(header=header, info=info, button0=button0, button1=button1, button2=button2)
+def show(header, info, button0=None, button1=None, button2=None, button3=None):
+    w = OptionsDialog.open(header=header, info=info, button0=button0, button1=button1, button2=button2, button3=button3)
     choice = w.buttonChoice
     del w
     util.garbageCollect()
